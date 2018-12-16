@@ -14,4 +14,17 @@ class Question < ApplicationRecord
   	self.status = false if self.status.nil?
   end
 
+  def your_answer? (answer_id)
+  	self.answer_id == answer_id
+  end
+
+  def your_user? (user)
+  	self.user == user
+  end
+
+  def toggle_true
+  	self.status='t'
+  end
+
+
 end
