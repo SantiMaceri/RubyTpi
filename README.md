@@ -13,7 +13,7 @@ bundle
 ``` 
 
 ## Testing
-To run the test located in /test/models execute:
+To run the tests located in /test/models execute:
 ``` bash
 rails test
 ``` 
