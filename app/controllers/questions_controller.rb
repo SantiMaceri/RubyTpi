@@ -4,19 +4,19 @@ before_action :set_user, only: [:create, :update, :resolve, :destroy]
 
 # GET /questions
 
-  def index 
-  	case params['sort']
+	  def index 
+	  	case params['sort']
 
-  	when "pending_first"
-  		@questions = Question.pending_first.limit(50)
-  	when "needing_help"
-  		@questions = Question.needing_help.limit(50)
-  	else
-	  	@questions = Question.latest.limit(50)
-  	end
+	  	when "pending_first"
+	  		@questions = Question.pending_first.limit(50)
+	  	when "needing_help"
+	  		@questions = Question.needing_help.limit(50)
+	  	else
+		  	@questions = Question.latest.limit(50)
+	  	end
 
-	render json: @questions, each_serializer: QuestionIndexSerializer
- end
+		render json: @questions, each_serializer: QuestionIndexSerializer
+	 end
 
 # GET /question/:id
 	 def show
