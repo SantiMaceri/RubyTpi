@@ -5,6 +5,7 @@ Full Rest Json Ruby on Rails for Users, Questions and Answers
 ## Requirements
 	- Ruby Version: 2.5.1
 	- Rails Version: 5.2.2
+	- SQLite3 Version: 3.22.0
 
 ## Configuration
 Clone the project and execute to install dependencies
