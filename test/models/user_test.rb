@@ -26,11 +26,13 @@ end
 	   assert_not_nil @user.errors[:email]
 	 end
 
+##SOLO HAGO ESTOS TEST DE VALIDACIONES PARA NO ABUSAR DE LA TRIVIALIDAD Y ASI HACER MAS TESTS. DEBERIA HABER UNO POR CAMPO VALIDADO
+
 	 test '#questions' do
   		assert_equal 2, @user.questions.size
  	 end
 
- 	
+
 
  	 test 'valid_token?' do
  		assert @user.valid_token?

@@ -46,5 +46,9 @@ end
 	  refute_includes Question.needing_help, @done
 	end
 
+	test '#answers' do
+  		assert_equal 2, @done.answers.size
+ 	 end
+
 
 end
