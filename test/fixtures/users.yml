@@ -1,17 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  username: MyString
-  password_digest: MyString
-  screen_name: MyString
-  email: MyString
-  token: MyString
-  update_token: DateTime
+valid:
+  username: Jhon
+  password_digest: asd
+  screen_name: Jhonsin
+  email: Jhon@gmail.com
+  update_token: <%= DateTime.now %>
 
-two:
+expired:
   username: MyString
   password_digest: MyString
   screen_name: MyString
   email: MyString
   token: MyString
-  update_token: DateTime
+  update_token: <%= DateTime.yesterday %>
