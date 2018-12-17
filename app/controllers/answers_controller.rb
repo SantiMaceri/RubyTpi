@@ -10,7 +10,7 @@ before_action :set_user, only:[:create, :destroy]
 
  # POST /questions/:question_id/answers
   def create
-  	if @question.status == 't'
+  	if @question.status
   		json_response(@question, :unprocessable_entity)
   	else
 	   @question.answers.create!(content: params[:content], user_id: @user.id)

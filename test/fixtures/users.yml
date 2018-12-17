@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  username=string: MyString
-  password_digest=string: MyString
-  screen_name=string: MyString
-  email=string: MyString
-  token=string: MyString
-  update_token=datetime: MyString
+  username: MyString
+  password_digest: MyString
+  screen_name: MyString
+  email: MyString
+  token: MyString
+  update_token: DateTime
 
 two:
-  username=string: MyString
-  password_digest=string: MyString
-  screen_name=string: MyString
-  email=string: MyString
-  token=string: MyString
-  update_token=datetime: MyString
+  username: MyString
+  password_digest: MyString
+  screen_name: MyString
+  email: MyString
+  token: MyString
+  update_token: DateTime

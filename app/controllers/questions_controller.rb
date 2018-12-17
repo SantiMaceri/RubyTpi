@@ -20,7 +20,8 @@ before_action :set_user, only: [:create, :update, :resolve, :destroy]
 
 # GET /question/:id
 	 def show
-	 	json_response(@question.as_comp)
+	 	#json_response(@question)
+	 	render json: @question, serializer: QuestionCompoundSerializer
 	 end
 
 # POST /questions

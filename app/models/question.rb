@@ -1,6 +1,6 @@
 class Question < ApplicationRecord
   belongs_to :user
-  has_many :answers
+  has_many :answers, dependent: :destroy
   after_initialize :init
   validates_presence_of :title, :description
 
@@ -23,7 +23,7 @@ class Question < ApplicationRecord
   end
 
   def toggle_true
-  	self.status='t'
+  	self.status = true
   end
 
 
