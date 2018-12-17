@@ -5,9 +5,11 @@ undone:
   description: "120CAracteressssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
   status: false
   user: valid
+  updated_at: <%= DateTime.yesterday %>
 
 done:
   title: La2
   description: "No hago 120 mas ni loco"
   status: true
   user: valid
+  updated_at: <%= DateTime.now %>

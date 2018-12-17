@@ -50,5 +50,9 @@ end
   		assert_equal 2, @done.answers.size
  	 end
 
+ 	 test '#latest' do
+	  assert_equal Question.latest.first, @done
+	  assert_equal Question.latest.second, @undone
+	end
 
 end
