@@ -12,7 +12,10 @@ Clone the project and execute to install dependencies
 ``` bash
 bundle
 ``` 
-
+There are migrations created for this project, they are not perfect, but they do the work. To run them:
+``` bash
+rails db:migrate
+``` 
 ## Testing
 To run the tests located in /test/models execute:
 ``` bash
