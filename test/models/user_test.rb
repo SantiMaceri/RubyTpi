@@ -30,12 +30,14 @@ end
   		assert_equal 2, @user.questions.size
  	 end
 
-  ## NO SIGO CON ESTOS TIPOS DE TEST ASI NO ABUSO DE TRIVIALIDAD, DEBERIA HABER UNO POR CADA CAMPO OBLIGATORIO
+ 	
 
- 	 test 'valid_token' do
+ 	 test 'valid_token?' do
  		assert @user.valid_token?
  		refute @expired.valid_token?
  	 end 
 
- 	 	 
+
+
+ 	 
 end

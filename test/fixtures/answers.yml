@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-1to1:
+validToDone:
   content: FromValidToDone
   question: done
   user: valid
 
-1to2:
+validtoUndone:
   content: FromValidToUndone
   question: undone
   user: valid
 
-2to1:
+expiredtoDone:
   content: FromExpiredToDone
   question: done
   user: expired
 
-2to2:
+expiredtoUndone:
   content: FromExpiredToUndone
   question: undone
   user: expired

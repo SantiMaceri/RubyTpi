@@ -3,8 +3,10 @@ require 'test_helper'
 class QuestionTest < ActiveSupport::TestCase
 
 def setup
+  @user = users(:valid)
   @done = questions(:done)
   @undone = questions(:undone)
+  @answer = answers(:validToDone)
 end
   
      test 'valid question' do
@@ -29,6 +31,20 @@ end
  	   refute @done.valid?, 'question is valid without a description'
  	   assert_not_nil @done.errors[:description], 'no validation error for description present'
  	 end
+
+ 	 test 'your_answer?'do
+ 	 	@done.answer_id=@answer.id
+ 	 	assert @done.your_answer? @answer.id
+ 	end
+
+ 	test 'your_user?' do
+ 		assert @done.your_user? @user
+ 	end
+
+ 	test '#needing_help' do
+	  assert_includes Question.needing_help, @undone
+	  refute_includes Question.needing_help, @done
+	end
 
 
 end
