@@ -15,13 +15,13 @@ before_action :set_user, only: [:create, :update, :resolve, :destroy]
 	  	@questions = Question.latest.limit(50)
   	end
 
-    json_response(@questions)
-  end
+	render json: @questions, each_serializer: QuestionIndexSerializer
+ end
 
 # GET /question/:id
 	 def show
 	 	#json_response(@question)
-	 	render json: @question, serializer: QuestionCompoundSerializer
+	 	render json: @question, serializer: QuestionCompundSerializer
 	 end
 
 # POST /questions
