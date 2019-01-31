@@ -20,7 +20,7 @@ before_action :set_user, only: [:create, :update, :resolve, :destroy]
 
 # GET /question/:id
 	 def show
-	 	if params[:more_info] == 'true'   ##NO ESTABA CLARO EL ENUNCIADO A LA HORA DE CONSEGUIR OPCIONALMENTE LA INFO, IMPLEMENTE ALGO SENCILLO
+	 	if params[:include] == 'answers'   #CONSULTAR
 	 		json_response(@question, serializer: QuestionCompoundSerializer) 
 	 	else
 	 		json_response(@question)
